@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>And You are Not....</title>
+</head>
+<body>
+	<h1>Email Goes here: 
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					{{message}}
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+	</h1>
+	<h1>Name goes here: {{first}}</h1>
+	<h1>Last Name goes here: {{last}}</h1>
+	<h1>Password Match {{match}} </h1>
+</body>
+</html>
